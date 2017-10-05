@@ -20,6 +20,26 @@ main_page_head = '''
         body {
             padding-top: 80px;
         }
+	/* custon navbar color */
+	.customNavbar{
+	    background-color: black;
+	    color: white;
+	}
+	/* change header color */
+	#customHeader{
+	    color: white;
+	    text-align: center;
+	    text-decoration: none;
+	}
+	/* change header color on hover */
+	#customHeader:hover{
+	    color: grey
+	}
+	/* add padding to button */
+	.playBtn{
+	    padding: 15px;
+	    margin-top: 10px;
+	}
         #trailer .modal-dialog {
             margin-top: 200px;
             width: 640px;
@@ -38,10 +58,6 @@ main_page_head = '''
         .movie-tile {
             margin-bottom: 20px;
             padding-top: 20px;
-        }
-        .movie-tile:hover {
-            background-color: #EEE;
-            cursor: pointer;
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -104,10 +120,13 @@ main_page_content = '''
 
     <!-- Main Page Content -->
     <div class="container">
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="navbar customNavbar navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">Fresh Tomatoes Movie Trailers</a>
+            <a id="customHeader" href="#">
+              <h2>Fresh Tomatoes Movie Trailers
+	      </h2>
+	     </a>
           </div>
         </div>
       </div>
@@ -122,9 +141,9 @@ main_page_content = '''
 
 # A single movie entry html template
 movie_tile_content = '''
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
+<div class="col-md-6 col-lg-4 movie-tile text-center">
     <img src="{poster_image_url}" width="220" height="342">
-    <h2>{movie_title}</h2>
+    <button type="button" class="btn btn-success playBtn center-block" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">Play {movie_title} Trailer</button>
 </div>
 '''
 
