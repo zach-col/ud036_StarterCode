@@ -6,7 +6,7 @@ class Movie():
 	self.storyline = movie_storyline
 	self.poster_image_url =  poster_image
 	self.trailer_youtube_url = trailer_youtube
-    # creating show_trailer methon that show's the movie's trailer
+    # creating show_trailer method that show's the movie's trailer
     def show_trailer(self):
         webbrowser.open(self.trailer_youtube_url)
 
