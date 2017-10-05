@@ -20,7 +20,7 @@ main_page_head = '''
         body {
             padding-top: 80px;
         }
-	/* custon navbar color */
+	/* custom navbar color */
 	.customNavbar{
 	    background-color: black;
 	    color: white;
