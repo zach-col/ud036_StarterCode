@@ -3,7 +3,7 @@
 import fresh_tomatoes
 import media
 
-# creating movie object's
+# creating movie object's work cited: Wikipedia and Youtube.
 toy_story = media.Movie("Toy Story",
                         "A story of a boy and his toys that come to life.",
                         "https://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg",
